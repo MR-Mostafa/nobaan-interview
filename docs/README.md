@@ -28,7 +28,7 @@
 
 <br>
 
-![./images/img1.jpg](img1)
+![img1](https://user-images.githubusercontent.com/2169236/210188576-0d305af4-ba7e-43a6-bff2-18df3c314ad3.jpg)
 
 <br>
 
