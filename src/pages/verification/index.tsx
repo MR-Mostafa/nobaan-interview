@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import styled from 'styled-components';
 
-import { Button, Container, Input, StepperInput, Text } from '~src/components';
+import { Button, Container, StepperInput, Text } from '~src/components';
 
 const Wrapper = styled.div`
 	max-width: 100%;

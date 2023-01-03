@@ -1,3 +1,3 @@
-export type colorType = 'danger' | 'primary' | 'warning' | 'success' | 'dark';
+export type ColorType = 'danger' | 'dark' | 'primary' | 'success' | 'warning';
 
-export type radiusType = 'rounded' | 'circle' | 'pill' | number;
+export type RadiusType = number | 'circle' | 'pill' | 'rounded';

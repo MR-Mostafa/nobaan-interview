@@ -1,6 +1,7 @@
-import styled, { CSSObject } from 'styled-components';
+import type { CSSObject } from 'styled-components';
+import styled from 'styled-components';
 
-import { globalColors } from '~src/constants';
+import { GlobalColorsTypes } from '~src/constants';
 
 import type { ThemeType } from './Text.types';
 
@@ -11,7 +12,7 @@ export const Component = styled.p`
 	${({ theme }: { theme: ThemeType }) => {
 		const css = {} as CSSObject;
 
-		css.color = globalColors[theme.color];
+		css.color = GlobalColorsTypes[theme.color];
 
 		css.fontSize = `${theme.size}px`;
 
