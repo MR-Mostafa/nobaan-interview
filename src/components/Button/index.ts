@@ -1,2 +1,2 @@
 export { Button } from './Button';
-export type { IButtonProps, ThemeType } from './Button.types';
+export type { IButtonProps } from './Button.types';
