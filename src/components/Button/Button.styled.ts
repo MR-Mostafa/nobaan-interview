@@ -13,6 +13,11 @@ export const Component = styled('button')<IButtonProps>`
 	position: relative;
 	overflow: hidden;
 	box-shadow: 0 0 4px 0px #00000061;
+	transition: all 0.15s ease-in-out;
+
+	&:active {
+		filter: brightness(0.5);
+	}
 
 	${({ theme }: { theme: ThemeType }) => {
 		const css = {} as CSSObject;
