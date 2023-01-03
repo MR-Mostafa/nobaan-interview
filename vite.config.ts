@@ -1,10 +1,18 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+
 import { resolve } from 'path';
+
+import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [react()],
+	plugins: [
+		react({
+			babel: {
+				babelrc: true,
+			},
+		}),
+	],
 	envDir: resolve(__dirname, 'src', 'env'),
 	envPrefix: 'GB_',
 	resolve: {
