@@ -1,14 +1,14 @@
-import { colorType, radiusType } from '~src/types/globalTypes';
+import type { ColorType, RadiusType } from '~src/types/globalTypes';
 
 export interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	/** Button type attribute */
-	type?: 'submit' | 'button' | 'reset';
+	type?: 'button' | 'reset' | 'submit';
 
 	/** Button color */
-	color?: colorType;
+	color?: ColorType;
 
 	/** Button border-radius */
-	radius?: radiusType;
+	radius?: RadiusType;
 
 	/** Button label */
 	children?: React.ReactNode;

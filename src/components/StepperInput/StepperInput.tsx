@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 import { Input } from '~src/components';
 
-import { IStepperInputProps } from './StepperInput.type';
+import type { IStepperInputProps } from './StepperInput.type';
 
 const Wrapper = styled.div`
 	position: relative;
@@ -90,13 +90,13 @@ export const StepperInput = memo(({ length, autoFocus, value, setValue, pattern 
 				value={value}
 				ref={inputRef}
 				onChange={(e) => {
-					const value = e.target.value?.trim();
+					const val = e.target.value?.trim();
 
-					if (pattern && !RegExp(pattern, 'gi').test(value)) return;
+					if (pattern && !RegExp(pattern, 'gi').test(val)) return;
 
-					if (value.length > length) return;
+					if (val.length > length) return;
 
-					setValue(value);
+					setValue(val);
 				}}
 			/>
 

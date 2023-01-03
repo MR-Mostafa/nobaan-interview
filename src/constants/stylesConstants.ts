@@ -1,4 +1,4 @@
-export const globalColors = {
+export const GlobalColorsTypes = {
 	danger: '#dc3545',
 	primary: '#007bff',
 	warning: '#ffc107',
@@ -6,7 +6,7 @@ export const globalColors = {
 	dark: '#212529',
 };
 
-export const globalRadius = {
+export const GlobalRadiusTypes = {
 	rounded: '4px',
 	circle: '50%',
 	pill: '50rem',

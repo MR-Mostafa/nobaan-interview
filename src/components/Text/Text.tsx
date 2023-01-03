@@ -3,7 +3,7 @@ import { forwardRef } from 'react';
 import cx from 'classnames';
 
 import { Component } from './Text.styled';
-import { ITextProps } from './Text.types';
+import type { ITextProps } from './Text.types';
 
 export const Text = forwardRef<HTMLParagraphElement, ITextProps>((props, ref) => {
 	const { children, size, color, padding, fontWeight, className, ...rest } = props;

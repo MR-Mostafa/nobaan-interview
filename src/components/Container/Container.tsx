@@ -1,7 +1,5 @@
-import { ReactNode } from 'react';
-
 interface IContainer {
-	children: ReactNode;
+	children: React.ReactNode;
 }
 
 export const Container = ({ children }: IContainer) => {

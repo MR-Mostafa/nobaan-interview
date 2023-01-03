@@ -14,7 +14,7 @@ export const Button = forwardRef<HTMLButtonElement, IButtonProps>((props, ref) =
 
 	return (
 		<Component ref={ref} type={type} className={classNames} theme={theme} {...rest}>
-			{props.children}
+			{children}
 		</Component>
 	);
 });

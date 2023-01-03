@@ -1,7 +1,8 @@
-import styled, { CSSObject } from 'styled-components';
+import type { CSSObject } from 'styled-components';
+import styled from 'styled-components';
 import Values from 'values.js';
 
-import { globalColors, globalRadius } from '~src/constants';
+import { GlobalColorsTypes, GlobalRadiusTypes } from '~src/constants';
 
 import type { IButtonProps, ThemeType } from './Button.types';
 
@@ -23,7 +24,7 @@ export const Component = styled('button')<IButtonProps>`
 		const css = {} as CSSObject;
 
 		if (theme.color) {
-			const value = globalColors[theme.color];
+			const value = GlobalColorsTypes[theme.color];
 			css.backgroundColor = value;
 			css.color = theme.color === 'warning' ? '#3b2c00' : '#fff';
 
@@ -37,7 +38,7 @@ export const Component = styled('button')<IButtonProps>`
 		}
 
 		if (theme.radius) {
-			const value = typeof theme.radius === 'number' ? `${theme.radius}px` : globalRadius[theme.radius];
+			const value = typeof theme.radius === 'number' ? `${theme.radius}px` : GlobalRadiusTypes[theme.radius];
 			css.borderRadius = value;
 		}
 

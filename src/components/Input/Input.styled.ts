@@ -1,14 +1,14 @@
-import styled, { CSSObject } from 'styled-components';
+import styled from 'styled-components';
 
-import { globalColors } from '~src/constants';
+import { GlobalColorsTypes } from '~src/constants';
 
-import { IInputProps } from './Input.types';
+import type { IInputProps } from './Input.types';
 
 export const Component = styled('input')<IInputProps>`
 	font-size: 15px;
 	font-weight: normal;
 	line-height: 1.6;
-	color: ${globalColors.dark};
+	color: ${GlobalColorsTypes.dark};
 	border: 1px solid #bcbcbc;
 	border-radius: 4px;
 	outline: none;
@@ -31,9 +31,9 @@ export const Component = styled('input')<IInputProps>`
 		cursor: not-allowed;
 	}
 
-	&.has-error {
-		border-color: ${globalColors.danger};
-		color: ${globalColors.danger};
+	&.hasError {
+		border-color: ${GlobalColorsTypes.danger};
+		color: ${GlobalColorsTypes.danger};
 
 		&:focus {
 			box-shadow: 0 0 3px 3px #dc354566;

@@ -1,4 +1,4 @@
-import { colorType } from '~src/types/globalTypes';
+import type { ColorType } from '~src/types/globalTypes';
 
 export interface ITextProps extends React.HTMLAttributes<HTMLParagraphElement> {
 	/** Text content */
@@ -8,7 +8,7 @@ export interface ITextProps extends React.HTMLAttributes<HTMLParagraphElement> {
 	size?: number;
 
 	/** Text color */
-	color?: colorType;
+	color?: ColorType;
 
 	/** Text Padding */
 	padding?: string;
@@ -17,4 +17,4 @@ export interface ITextProps extends React.HTMLAttributes<HTMLParagraphElement> {
 	fontWeight?: 'bold' | 'bolder' | 'normal' | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900;
 }
 
-export type ThemeType = Required<Pick<ITextProps, 'size' | 'color' | 'padding' | 'fontWeight'>>;
+export type ThemeType = Required<Pick<ITextProps, 'color' | 'fontWeight' | 'padding' | 'size'>>;
