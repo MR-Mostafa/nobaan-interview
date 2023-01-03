@@ -6,7 +6,9 @@
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc && vite build",
-		"preview": "yarn run build && vite preview"
+		"preview": "yarn run build && vite preview",
+		"prettier:check": "prettier --check \"**/*.{ts,tsx}\"",
+		"prettier:fix": "prettier --write \"**/*.{ts,tsx}\""
 	},
 	"dependencies": {
 		"bootstrap": "^5.2.3",
