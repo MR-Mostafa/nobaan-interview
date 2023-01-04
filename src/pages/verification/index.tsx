@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 import styled from 'styled-components';
 
 import { Button, Container, StepperInput, Text } from '~src/components';
+import { currentValue } from '~src/store/slice/textValue';
 
 const Wrapper = styled.div`
 	max-width: 100%;
@@ -27,6 +29,7 @@ const Flex = styled.div`
 export const VerificationPage = () => {
 	const [value, setValue] = useState<string>('');
 	const navigate = useNavigate();
+	const textValue = useSelector(currentValue);
 
 	const handleNavigate = (to: string) => {
 		navigate(to);
@@ -73,6 +76,10 @@ export const VerificationPage = () => {
 					correct phone number
 				</Button>
 			</Wrapper>
+
+			<Text size={18} fontWeight="bold" padding="0 0 0.25rem" css={{ display: 'block', marginTop: '15px', marginBottom: '20px' }}>
+				Your Text Field : {textValue}
+			</Text>
 
 			<Button
 				color="success"

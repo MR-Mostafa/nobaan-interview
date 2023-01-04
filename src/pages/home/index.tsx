@@ -1,10 +1,12 @@
-import { useRef, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 import styled from 'styled-components';
 
 import { Button, Container, Dialog, Input, Portal, Text } from '~src/components';
 import { useClickOutside, useHotkeys } from '~src/hooks';
+import { currentValue, updateValue } from '~src/store/slice/textValue';
 
 const Flex = styled.div`
 	display: flex;
@@ -15,14 +17,27 @@ const Flex = styled.div`
 
 export const HomePage = () => {
 	const [openDialog, setOpenDialog] = useState(false);
-	const [textValue, setTextValue] = useState('');
+	const textValue = useSelector(currentValue);
+	const dispatch = useDispatch();
 	const navigate = useNavigate();
 	const refClickOut = useClickOutside(() => setOpenDialog(false));
 	const inputRef = useRef<HTMLInputElement>(null);
 
-	const handleNavigate = (to: string) => {
-		navigate(to);
-	};
+	const updateTextValue = useCallback(
+		(value: string) => {
+			dispatch(updateValue(value));
+		},
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+		[],
+	);
+
+	const handleNavigate = useCallback(
+		(to: string) => {
+			navigate(to);
+		},
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+		[],
+	);
 
 	useHotkeys(
 		[
@@ -76,6 +91,10 @@ export const HomePage = () => {
 				</Button>
 			</Flex>
 
+			<Text size={18} fontWeight="bold" padding="0 0 0.25rem" css={{ display: 'block', marginTop: '15px', marginBottom: '20px' }}>
+				Your Text Field : {textValue}
+			</Text>
+
 			<Portal
 				bodyClassName="dialog-opened"
 				className="show-dialog with-animation"
@@ -94,8 +113,12 @@ export const HomePage = () => {
 						css={{ fontSize: '17px', height: '47px', backgroundColor: '#f7f7f7', display: 'block', width: '100%' }}
 						ref={inputRef}
 						value={textValue}
-						onChange={(e) => setTextValue(e.target.value)}
+						onChange={(e) => updateTextValue(e.target.value)}
 					/>
+
+					<Text size={18} fontWeight="bold" padding="0 0 0.25rem" css={{ display: 'block', marginTop: '15px' }}>
+						Your Text Field : {textValue}
+					</Text>
 				</Dialog>
 			</Portal>
 		</Container>

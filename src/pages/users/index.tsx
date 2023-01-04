@@ -1,9 +1,12 @@
+import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 import { Button, Container, Text } from '~src/components';
+import { currentValue } from '~src/store/slice/textValue';
 
 export const UsersPage = () => {
 	const navigate = useNavigate();
+	const textValue = useSelector(currentValue);
 
 	const handleNavigate = (to: string) => {
 		navigate(to);
@@ -24,6 +27,10 @@ export const UsersPage = () => {
 			>
 				Go Back To Home
 			</Button>
+
+			<Text size={18} fontWeight="bold" padding="0 0 0.25rem" css={{ display: 'block', marginTop: '15px' }}>
+				Your Text Field : {textValue}
+			</Text>
 		</Container>
 	);
 };
