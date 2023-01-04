@@ -3,6 +3,6 @@
 	"language": "en",
 	"ignorePaths": ["**/node_modules/**", "**/package.json"],
 	"dictionaries": ["typescript", "node", "html", "css"],
-	"words": ["cssprop"],
+	"words": ["cssprop", "reduxjs"],
 	"ignoreWords": []
 }

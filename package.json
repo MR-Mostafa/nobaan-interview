@@ -15,10 +15,12 @@
 		"pre-commit": "yarn run prettier:check && yarn run eslint:check && yarn run spell"
 	},
 	"dependencies": {
+		"@reduxjs/toolkit": "^1.9.1",
 		"bootstrap": "^5.2.3",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-icons": "^4.7.1",
+		"react-redux": "^8.0.5",
 		"react-router-dom": "^6.6.1",
 		"styled-components": "^5.3.6"
 	},
