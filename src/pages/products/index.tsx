@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Button, Container, Text } from '~src/components';
 import { currentValue } from '~src/store/slice/textValue';
 
-export const ProductsPage = () => {
+const ProductsPage = () => {
 	const navigate = useNavigate();
 
 	const textValue = useSelector(currentValue);
@@ -35,3 +35,5 @@ export const ProductsPage = () => {
 		</Container>
 	);
 };
+
+export default ProductsPage;

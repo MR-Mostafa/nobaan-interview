@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { Button, Container, Text } from '~src/components';
 
-export const NotFound = () => {
+const NotFound = () => {
 	const navigate = useNavigate();
 
 	const handleNavigate = (to: string) => {
@@ -27,3 +27,5 @@ export const NotFound = () => {
 		</Container>
 	);
 };
+
+export default NotFound;

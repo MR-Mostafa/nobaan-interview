@@ -15,7 +15,7 @@ const Flex = styled.div`
 	gap: 15px;
 `;
 
-export const HomePage = () => {
+const HomePage = () => {
 	const [openDialog, setOpenDialog] = useState(false);
 	const textValue = useSelector(currentValue);
 	const dispatch = useDispatch();
@@ -124,3 +124,5 @@ export const HomePage = () => {
 		</Container>
 	);
 };
+
+export default HomePage;
