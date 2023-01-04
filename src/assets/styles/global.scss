@@ -1,2 +1,53 @@
 @import 'bootstrap/scss/bootstrap-reboot';
 @import 'bootstrap/scss/bootstrap-grid';
+
+.dialog-opened {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+@keyframes showDialog {
+	from {
+		opacity: 0;
+		transform: scale(0.8) translateY(-30%);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1) translateY(0);
+	}
+}
+
+@keyframes showBackDrop {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.show-dialog {
+	&.with-animation {
+		.dialog {
+			opacity: 0;
+			transform: scale(0.8) translateY(-30%);
+
+			animation-name: showDialog;
+			animation-duration: 0.15s;
+			animation-timing-function: ease-in-out;
+			animation-delay: 0.25s;
+			animation-iteration-count: 1;
+			animation-fill-mode: forwards;
+		}
+
+		.back-drop {
+			opacity: 0;
+			animation-name: showBackDrop;
+			animation-duration: 0.2s;
+			animation-timing-function: ease-in-out;
+			animation-iteration-count: 1;
+			animation-fill-mode: forwards;
+		}
+	}
+}
