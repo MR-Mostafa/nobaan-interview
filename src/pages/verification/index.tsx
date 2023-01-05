@@ -26,7 +26,7 @@ const Flex = styled.div`
 	padding-bottom: 0.5rem;
 `;
 
-export const VerificationPage = () => {
+const VerificationPage = () => {
 	const [value, setValue] = useState<string>('');
 	const navigate = useNavigate();
 	const textValue = useSelector(currentValue);
@@ -93,3 +93,5 @@ export const VerificationPage = () => {
 		</Container>
 	);
 };
+
+export default VerificationPage;

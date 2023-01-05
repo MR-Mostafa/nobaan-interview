@@ -5,3 +5,4 @@ export * from './Input';
 export * from './StepperInput';
 export * from './Dialog';
 export * from './Portal';
+export * from './Loading';
