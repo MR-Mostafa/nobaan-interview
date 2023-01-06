@@ -15,7 +15,7 @@ const ProductsPage = () => {
 
 	return (
 		<Container>
-			<Text padding="0 0 10px" size={30} fontWeight="bold">
+			<Text padding="0 0 10px" size={30} fontWeight="bold" className="title">
 				Products Page
 			</Text>
 
@@ -25,6 +25,7 @@ const ProductsPage = () => {
 				type="button"
 				onClick={() => handleNavigate('/')}
 				css={{ paddingLeft: '15px', paddingRight: '15px' }}
+				className="btn-back"
 			>
 				Go Back To Home
 			</Button>

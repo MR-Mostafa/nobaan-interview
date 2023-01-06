@@ -1,4 +1,5 @@
-import styled, { CSSObject, keyframes } from 'styled-components';
+import type { CSSObject } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import { GlobalColorsTypes } from '~src/constants';
 

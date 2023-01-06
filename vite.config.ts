@@ -1,4 +1,4 @@
-import { ConfigEnv, defineConfig } from 'vite';
+import { ConfigEnv, defineConfig, loadEnv } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 
 import { resolve } from 'path';
@@ -8,6 +8,7 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig((config: ConfigEnv) => {
 	const mode = config.mode as 'development' | 'production';
+	const hasDisabledPwa = process.env.hasDisabledPwa === 'true' ? true : false;
 
 	return {
 		plugins: [
@@ -22,8 +23,10 @@ export default defineConfig((config: ConfigEnv) => {
 				useCredentials: true,
 				manifestFilename: 'site.webmanifest',
 				base: '/',
+				disable: hasDisabledPwa,
 				workbox: {
 					globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
+					globIgnores: ['**/node_modules/**/*', 'sw.js', 'workbox-*.js'],
 					maximumFileSizeToCacheInBytes: 3000000, // 3MiB
 					skipWaiting: false,
 					runtimeCaching: [
