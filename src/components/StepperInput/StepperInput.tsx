@@ -89,6 +89,7 @@ export const StepperInput = memo(({ length, autoFocus, value, setValue, pattern 
 			<Input
 				value={value}
 				ref={inputRef}
+				className="verification-input"
 				onChange={(e) => {
 					const val = e.target.value?.trim();
 

@@ -41,7 +41,7 @@ const VerificationPage = () => {
 
 	return (
 		<Container>
-			<Text padding="0 0 10px" size={30} fontWeight="bold">
+			<Text padding="0 0 10px" size={30} fontWeight="bold" className="title">
 				Verification Page
 			</Text>
 
@@ -65,7 +65,7 @@ const VerificationPage = () => {
 						VERIFY CODE
 					</Button>
 
-					<Button color="danger" radius="rounded" type="button" onClick={handleClearValue}>
+					<Button color="danger" radius="rounded" type="button" className="btn-clear" onClick={handleClearValue}>
 						CLEAR
 					</Button>
 				</Flex>
@@ -87,6 +87,7 @@ const VerificationPage = () => {
 				type="button"
 				onClick={() => handleNavigate('/')}
 				css={{ paddingLeft: '15px', paddingRight: '15px' }}
+				className="btn-back"
 			>
 				Go Back To Home
 			</Button>

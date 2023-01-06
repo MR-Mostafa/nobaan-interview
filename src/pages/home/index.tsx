@@ -71,7 +71,7 @@ const HomePage = () => {
 
 	return (
 		<Container>
-			<Text padding="0 0 10px" size={30} fontWeight="bold">
+			<Text padding="0 0 10px" size={30} fontWeight="bold" className="title">
 				Home Page
 			</Text>
 
