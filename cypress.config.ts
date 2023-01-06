@@ -2,8 +2,8 @@ import { defineConfig } from 'cypress';
 
 export default defineConfig({
 	e2e: {
-		port: 8080,
+		port: 8081,
 		supportFile: false,
-		baseUrl: 'http://localhost:4173',
+		baseUrl: 'http://localhost:8080',
 	},
 });

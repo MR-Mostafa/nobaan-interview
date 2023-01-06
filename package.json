@@ -13,7 +13,8 @@
 		"eslint:fix": "eslint --fix \"src/**/*.{ts,tsx}\"",
 		"spell": "cspell \"src/**/*\"",
 		"pre-commit": "yarn run prettier:check && yarn run eslint:check && yarn run spell",
-		"cypress": "cypress open --e2e"
+		"cypress:open": "cypress open --e2e",
+		"test": "concurrently -c \"auto\" \"cross-env hasDisabledPwa=true yarn run preview --strictPort --port 8080\" \"yarn run cypress:open\""
 	},
 	"dependencies": {
 		"@reduxjs/toolkit": "^1.9.1",
@@ -38,6 +39,8 @@
 		"@vitejs/plugin-react": "^3.0.0",
 		"babel-plugin-styled-components": "^2.0.7",
 		"classnames": "^2.3.2",
+		"concurrently": "^7.6.0",
+		"cross-env": "^7.0.3",
 		"cspell": "^6.18.1",
 		"cypress": "^12.3.0",
 		"eslint": "^8.31.0",
