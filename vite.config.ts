@@ -26,6 +26,7 @@ export default defineConfig((config: ConfigEnv) => {
 				disable: hasDisabledPwa,
 				workbox: {
 					globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
+					globIgnores: ['**/node_modules/**/*', 'sw.js', 'workbox-*.js'],
 					maximumFileSizeToCacheInBytes: 3000000, // 3MiB
 					skipWaiting: false,
 					runtimeCaching: [
