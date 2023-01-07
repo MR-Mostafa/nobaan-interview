@@ -11,16 +11,16 @@
 		"dev": "turbo run dev --parallel",
 		"lint": "turbo run lint",
 		"test": "turbo run test",
-		"preview": "turbo run preview"
+		"preview": "turbo run preview",
+		"prepare": "husky install"
 	},
 	"devDependencies": {
+		"husky": "^8.0.3",
 		"prettier": "latest",
-		"turbo": "latest",
-		"husky": "^8.0.3"
+		"turbo": "latest"
 	},
 	"engines": {
 		"node": ">=14.0.0"
 	},
-	"dependencies": {},
 	"packageManager": "yarn@1.22.19"
 }
