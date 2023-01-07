@@ -26,7 +26,8 @@
 		"react-icons": "^4.7.1",
 		"react-redux": "^8.0.5",
 		"react-router-dom": "^6.6.1",
-		"styled-components": "^5.3.6"
+		"styled-components": "^5.3.6",
+		"button": "*"
 	},
 	"devDependencies": {
 		"@trivago/prettier-plugin-sort-imports": "^4.0.0",

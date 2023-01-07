@@ -2,9 +2,10 @@ import { useCallback, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
+import { Button } from 'button';
 import styled from 'styled-components';
 
-import { Button, Container, Dialog, Input, Portal, Text } from '~src/components';
+import { Container, Dialog, Input, Portal, Text } from '~src/components';
 import { useClickOutside, useHotkeys } from '~src/hooks';
 import { currentValue, updateValue } from '~src/store/slice/textValue';
 

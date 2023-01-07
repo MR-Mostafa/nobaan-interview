@@ -1,4 +1,6 @@
-import type { ColorType, RadiusType } from '~src/types/globalTypes';
+export type ColorType = 'danger' | 'dark' | 'primary' | 'success' | 'warning';
+
+export type RadiusType = number | 'circle' | 'pill' | 'rounded';
 
 export interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	/** Button type attribute */

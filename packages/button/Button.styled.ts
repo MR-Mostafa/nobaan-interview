@@ -2,9 +2,21 @@ import type { CSSObject } from 'styled-components';
 import styled from 'styled-components';
 import Values from 'values.js';
 
-import { GlobalColorsTypes, GlobalRadiusTypes } from '~src/constants';
-
 import type { IButtonProps, ThemeType } from './Button.types';
+
+export const GlobalColorsTypes = {
+	danger: '#dc3545',
+	primary: '#007bff',
+	warning: '#ffc107',
+	success: '#28a745',
+	dark: '#212529',
+};
+
+export const GlobalRadiusTypes = {
+	rounded: '4px',
+	circle: '50%',
+	pill: '50rem',
+};
 
 export const Component = styled('button')<IButtonProps>`
 	padding: 3px 7px 5px;

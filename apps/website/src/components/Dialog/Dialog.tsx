@@ -1,9 +1,10 @@
 import { forwardRef } from 'react';
 import { IoClose } from 'react-icons/io5';
 
+import { Button } from 'button';
 import cx from 'classnames';
 
-import { Button, Text } from '~src/components';
+import { Text } from '~src/components';
 
 import { Component } from './Dialog.styled';
 import type { IDialogProps } from './Dialog.types';
