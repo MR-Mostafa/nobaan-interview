@@ -8,3 +8,4 @@ build
 *.cjs
 *.json
 vite.config.ts
+**/eslint-config-custom/*

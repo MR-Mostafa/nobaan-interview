@@ -1,0 +1,20 @@
+{
+	"extends": "tsconfig/react-library.json",
+	"compilerOptions": {
+		"types": ["vite-plugin-pwa", "vite-plugin-pwa/client", "cypress"],
+		"baseUrl": ".",
+		"paths": {
+			"~src/*": ["src/*"],
+			"~assets/*": ["src/assets/*"],
+			"~components/*": ["src/components/*"],
+			"~constants/*": ["src/constants/*"],
+			"~hooks/*": ["src/hooks/*"],
+			"~pages/*": ["src/pages/*"],
+			"~services/*": ["src/services/*"],
+			"~types/*": ["src/types/*"]
+		}
+	},
+	"include": ["src"],
+	"references": [{ "path": "./tsconfig.node.json" }],
+	"exclude": ["node_modules"]
+}

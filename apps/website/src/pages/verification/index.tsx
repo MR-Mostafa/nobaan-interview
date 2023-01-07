@@ -2,9 +2,10 @@ import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
+import { Button } from 'button';
 import styled from 'styled-components';
 
-import { Button, Container, StepperInput, Text } from '~src/components';
+import { Container, StepperInput, Text } from '~src/components';
 import { currentValue } from '~src/store/slice/textValue';
 
 const Wrapper = styled.div`

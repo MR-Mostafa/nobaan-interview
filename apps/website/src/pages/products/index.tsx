@@ -1,7 +1,9 @@
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-import { Button, Container, Text } from '~src/components';
+import { Button } from 'button';
+
+import { Container, Text } from '~src/components';
 import { currentValue } from '~src/store/slice/textValue';
 
 const ProductsPage = () => {
